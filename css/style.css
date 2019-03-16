@@ -1,0 +1,138 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -moz-tap-highlight-color: rgba(255, 255, 255, 0);
+  -ms-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+body {
+  position: relative;
+}
+
+.nav-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #153257;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.header {
+  width: 100%;
+}
+
+.utility-bar {
+  width: 100%;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  background-color: #68caa4;
+}
+
+.utility-bar__left {
+  width: 270px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.utility-bar__consultant-container {
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-right: 1px solid #43AE86;
+}
+
+.utility-bar__consultant {
+  margin: auto;
+}
+
+.utility-bar__help-container {
+  width: 30%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.utility-bar__help {
+  margin: auto;
+}
+
+.utility-bar__mid {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.utility-bar__promo-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.utility-bar__promo {
+  margin: auto;
+}
+
+.utility-bar__right {
+  width: 270px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.utility-bar__country-container {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-right: 1px solid #43AE86;
+}
+
+.utility-bar__country {
+  margin: auto;
+}
+
+.utility-bar__login-container {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.utility-bar__login {
+  margin: auto;
+}
+/*# sourceMappingURL=style.css.map */
