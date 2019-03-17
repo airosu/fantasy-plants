@@ -619,4 +619,16 @@ body {
     background-size: 20px 20px;
   }
 }
+
+.hero {
+  width: 100%;
+}
+
+.hero__image-container {
+  width: 100%;
+}
+
+.hero__image {
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
