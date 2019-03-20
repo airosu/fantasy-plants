@@ -620,6 +620,10 @@ body {
   }
 }
 
+.section-hero {
+  margin-top: 110px;
+}
+
 .hero {
   width: 100%;
 }
@@ -630,5 +634,17 @@ body {
 
 .hero__image {
   width: 100%;
+  max-height: 770px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 -200px;
+     object-position: 0 -200px;
+}
+
+@media (max-width: 1024px) {
+  .hero__image {
+    -o-object-position: 0 0;
+       object-position: 0 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
