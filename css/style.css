@@ -24,6 +24,23 @@ body {
   position: relative;
 }
 
+.section-text {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.section-text__title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.section-text__description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
 @font-face {
   font-family: 'fontello';
   src: url("../fonts/fontello/fontello.eot?68258596");
@@ -225,11 +242,17 @@ body {
 }
 
 /* '' */
+.section-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .util-link {
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   line-height: 16px;
-  color: #153257;
+  color: #333;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
@@ -245,7 +268,7 @@ body {
 .nav-link {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
-  color: #153257;
+  color: #333;
   font-weight: 600;
   text-decoration: none;
 }
@@ -264,17 +287,17 @@ body {
 }
 
 .icon-map-blue:before {
-  color: #153257;
+  color: #333;
   margin-right: 4px;
 }
 
 .icon-bag:before {
-  color: #153257;
+  color: #333;
   font-size: 22px;
 }
 
 .icon-search-blue:before {
-  color: #153257;
+  color: #333;
   font-size: 20px;
 }
 
@@ -535,6 +558,41 @@ body {
 .navigation-bar__link {
   padding: 10px 0px 7px 0px;
   margin: 0 25px;
+  position: relative;
+}
+
+.navigation-bar__link::before {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.navigation-bar__link::after {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #68CAA4;
+  height: 2px;
+}
+
+.navigation-bar__link:hover {
+  color: #68CAA4;
+}
+
+.navigation-bar__link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .navigation-bar__link:hover::after {
+    width: 0;
+  }
 }
 
 .navigation-bar__right {
@@ -621,7 +679,10 @@ body {
 }
 
 .section-hero {
+  width: 100%;
   margin-top: 110px;
+  margin-bottom: 40px;
+  position: relative;
 }
 
 .hero {
@@ -634,11 +695,9 @@ body {
 
 .hero__image {
   width: 100%;
-  max-height: 770px;
+  height: 770px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 0 -200px;
-     object-position: 0 -200px;
 }
 
 @media (max-width: 1024px) {
@@ -646,5 +705,108 @@ body {
     -o-object-position: 0 0;
        object-position: 0 0;
   }
+}
+
+.explore-section {
+  padding: 0 8px;
+}
+
+.explore__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .explore__container {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.explore__left-section {
+  width: 50%;
+  margin-right: 4px;
+}
+
+@media (max-width: 1024px) {
+  .explore__left-section {
+    width: 100%;
+  }
+}
+
+.explore__right-section {
+  width: 50%;
+  margin-left: 4px;
+}
+
+@media (max-width: 1024px) {
+  .explore__right-section {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.explore__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.explore__large-image-wrapper--left {
+  margin-bottom: 8px;
+}
+
+.explore__large-image-wrapper--right {
+  margin-top: 8px;
+}
+
+.explore__large-image-picture {
+  width: 100%;
+}
+
+.explore__large-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.explore__large-image {
+  width: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.explore__small-images-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  .explore__small-images-wrapper--left {
+    margin-bottom: 8px;
+  }
+}
+
+.explore__small-image-picture {
+  width: calc(50% - 4px);
+}
+
+.explore__small-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.explore__small-image {
+  width: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 /*# sourceMappingURL=style.css.map */

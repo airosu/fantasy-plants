@@ -2,7 +2,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     line-height: 16px;
-    color: #153257;
+    color: #333;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
@@ -16,7 +16,7 @@
 .nav-link {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    color: #153257;
+    color: #333;
     font-weight: 600;
     text-decoration: none;
 }
@@ -40,17 +40,17 @@
 // ================================ ICONS ================================
 
 .icon-map-blue:before {
-    color: #153257;
+    color: #333;
     margin-right: 4px;
 }
 
 .icon-bag:before {
-    color: #153257;
+    color: #333;
     font-size: 22px;
 }
 
 .icon-search-blue:before {
-    color: #153257;
+    color: #333;
     font-size: 20px;
 }
 
@@ -256,6 +256,38 @@
     &__link {
         padding: 10px 0px 7px 0px;
         margin: 0 25px;
+        position: relative;
+
+        &::before {
+            transition: all .2s;
+        }
+
+        &::after {
+            transition: all .2s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0%;
+            content: '.';
+            color: transparent;
+            background: #68CAA4;
+            height: 2px;
+        }
+
+        &:hover {
+            color: #68CAA4;
+
+        }
+
+        &:hover::after {
+            width: 100%;
+
+            @media (max-width: 1024px) {
+                width: 0;
+            }
+        }
     }
 
 
