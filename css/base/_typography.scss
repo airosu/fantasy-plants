@@ -1,4 +1,25 @@
 
+.section-text {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin-bottom: 50px;
+
+    &__title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+// ============================================== FONTS ================================================
 @font-face {
     font-family: 'fontello';
     src: url('../fonts/fontello/fontello.eot?68258596');

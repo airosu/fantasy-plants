@@ -1,0 +1,200 @@
+
+
+// ================ CREATE TYPOGRAPHY ====================================
+
+.create-pre-heading {
+    font-family: 'Noto Serif', serif;
+    color: $color-gold;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+.create-heading {
+    font-family: 'Montserrat', sans-serif;
+    color: $color-main;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.create-description {
+    font-family: 'Maven Pro', sans-serif;
+    color: $color-second;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: normal;
+}
+
+
+
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    color: $color-main;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-description {
+    font-family: 'Maven Pro', sans-serif;
+    color: $color-second;
+    font-size: 17px;
+    line-height: 21px;
+    font-weight: normal;
+}
+
+.card-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: $color-main;
+}
+
+
+
+
+// ==================== CREATE SECTION ==============================
+
+.section-block {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.create-section {
+    max-width: 1300px;
+    margin: 100px auto 100px auto;
+    
+}
+
+
+
+
+
+
+
+.create {
+    &__main-container {
+        width: 100%;
+        display: flex;
+    }
+
+
+
+    &__left-section {
+        width: 50%;
+        padding-right: 50px;
+    }
+
+
+    &__details {
+        padding: 0 20px;
+    }
+
+    &__pre-heading {
+        margin-bottom: 10px;
+    }
+    &__heading {
+        margin-bottom: 35px;
+    }
+    &__description {
+        margin-bottom: 40px;
+    }
+
+
+    &__cards-container {
+        width: 100%;
+    }
+    &__cards-top {
+        width: 100%;
+        display: flex;
+        margin-bottom: 10px;
+    }
+    &__cards-bot {
+        width: 100%;
+        display: flex;
+    }
+
+
+
+
+
+    &__card {
+        width: 50%;
+        padding: 20px;
+    }
+
+    &__count-main-container {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__count-number-container {
+        height: 50px;
+        width: 50px;
+        display: flex;
+    }
+    &__count-number {
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        border: 2px solid $color-gold;
+        border-radius: 25px;
+        position: relative;
+    }
+    &__count-number-span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+
+    &__count-line-container {
+        width: 100%;
+        padding-left: 20px;
+    }
+    &__count-line {
+        width: 100%;
+        height: 50%;
+        border-bottom: 2px solid $color-gold;
+    }
+
+
+
+    &__card-title {
+        margin-bottom: 12px;
+    }
+
+
+
+
+
+
+    &__right-section {
+        width: 50%;
+        display: flex;
+        padding-left: 50px;
+    }
+
+    &__products-left {
+        width: 50%;
+        // padding: 90px 0 0 0;
+    }
+    &__products-right {
+        width: 50%;
+        padding: 90px 0 0 0;
+    }
+
+
+    &__product-container {
+        width: 100%;
+        //height: 360px;
+        padding: 20px;
+    }
+}
