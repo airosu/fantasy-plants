@@ -268,8 +268,15 @@ body {
   position: relative;
 }
 
+.product__image-container:hover img {
+  -webkit-transform: scale(0.93);
+          transform: scale(0.93);
+}
+
 .product__image {
   width: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .product__wishlist-container {
@@ -327,6 +334,12 @@ body {
   max-width: 95px;
   width: 100%;
   margin: 20px auto 50px auto;
+}
+
+.jar-wrap {
+  max-width: 190px;
+  width: 100%;
+  margin: auto;
 }
 
 .decoration {
