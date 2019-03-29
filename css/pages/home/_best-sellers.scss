@@ -1,3 +1,19 @@
+// ======================= BEST OPTIONS ==============================
+
+.best-options-section {
+    padding-bottom: 100px;
+    border-bottom: 1px solid $color-light-grey;
+    margin-bottom: 100px;
+}
+
+
+// ======================= BEST SELLERS ==============================
+
+.best-sellers-section {
+    margin-bottom: 100px;
+}
+
+
 
 
 .best-sellers {
@@ -6,7 +22,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        margin-top: 50px;
+        // margin-top: 50px;
 
         @media (max-width: 1024px) {
             display: block;
@@ -79,3 +95,5 @@
         }
     }
 }
+
+

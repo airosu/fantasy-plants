@@ -1,0 +1,80 @@
+
+
+// ================================== TYPOGRAPHY ========================================
+
+.options {
+
+    &__text-small {
+        // font-family: 'Montserrat', sans-serif;
+        font-family: 'Srisakdi', cursive;
+        font-size: 27px;
+    }
+
+    &__text-large {
+        // font-family: 'Montserrat', sans-serif;
+        // font-family: 'Srisakdi', cursive;
+        // font-family: 'Maven Pro', sans-serif;
+        font-family: 'Noto Serif', Serif;
+                font-size: 37px;
+    }
+}
+
+// ============================== STRUCTURE / STYLE =====================================
+
+.options-section {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.options {
+    &__main-container {
+        width: 100%;
+        display: flex;
+        padding: 10px;
+    }
+
+
+
+    &__image-container {
+        width: calc(100% / 3);
+        padding: 10px;
+        position: relative;
+    }
+    &__image {
+        width: 100%;
+    }
+
+
+    &__image-dark-overlay {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+
+
+    &__image-text-overlay {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+    }
+    &__image-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+        cursor: default;
+    }
+
+
+
+}
+
