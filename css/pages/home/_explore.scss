@@ -1,4 +1,76 @@
 
+
+// ================================ TYPOGRAPHY ========================================
+
+.explore {
+    &__overlay-text-wrapper {
+        text-decoration: none;
+
+        &:hover {
+            .explore__overlay-text-link {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__overlay-text-category {
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 20px;
+    }
+
+    &__overlay-text-description-lg {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 20px;
+
+        @media (max-width: 580px) {
+            font-size: 25px;
+        }
+    }
+
+    &__overlay-text-description-sm {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 20px;
+
+        @media (max-width: 680px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 425px) {
+            font-size: 13px;
+        }
+    }
+
+    &__overlay-text-link {
+        text-align: center;
+        font-size: 17px;
+        font-weight: bold;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 20px;
+
+        @media (max-width: 425px) {
+            font-size: 14px;
+        }
+    }
+}
+
+
+
+
+
+// ============================ STRUCTURE / STYLE =====================================
+
 .explore-section {
     padding: 0 8px;
     margin-bottom: 50px;
@@ -37,13 +109,7 @@
         }
     }
     
-    &__overlay {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
+
 
 
 
@@ -56,19 +122,35 @@
             margin-top: 8px;
         }
     }
+
     &__large-image-picture {
         width: 100%;
     }
+
     &__large-image-container {
         position: relative;
         overflow: hidden;
+        transition: transform 0.3s;
+
+        &:hover {
+            .explore__overlay-text-lg {
+                visibility: visible;
+                opacity: 1;
+                transition: all 0.3s;
+            }
+
+            .explore__large-image {
+                transform: scale(1.2);
+                transition: transform 0.6s;
+            }
+        }
     }
+
     &__large-image {
         width: 100%;
         transform: scale(1);
+        transition: transform 0.3s;
     }
-
-
 
 
 
@@ -84,17 +166,151 @@
             }
         }
     }
+
     &__small-image-picture {
         width: calc(50% - 4px);
     }
+
     &__small-image-container {
         position: relative;
         overflow: hidden;
+        transition: transform 0.3s;
+
+        &:hover {
+            .explore__overlay-text-sm {
+                visibility: visible;
+                opacity: 1;
+                transition: all 0.3s;
+            }
+
+            .explore__small-image {
+                transform: scale(1.2);
+                transition: transform 0.6s;
+            }
+        }
+
     }
+
     &__small-image {
         width: 100%;
         transform: scale(1);
+        transition: transform 0.3s;
     }
 }
 
+
+// ================================ OVERLAY ========================================
+
+
+.explore {
+    &__overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: background-color 0.5s;
+    }
+
+
+    &__overlay-text-lg {
+        width: 320px;
+        margin: 30% auto 0 auto;
+        cursor: default;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+
+        @media (max-width: 1024px) {
+            width: 80%;
+            margin: 39% auto 0 auto;
+        }
+
+        @media (max-width: 580px) {
+            margin-top: 23%;
+        }
+    }
+
+    &__overlay-text-sm {
+        width: 200px;
+        margin: 24% auto 0 auto;
+        cursor: default;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+
+        @media (max-width: 1024px) {
+            width: 80%;
+            margin: 39% auto 0 auto;
+        }
+
+        @media (max-width: 680px) {
+            margin-top: 23%;
+        }
+
+        @media (max-width: 425px) {
+            margin-top: 18%;
+        }
+    }
+}
+
+
+
+
+
+
+// ========================== OVERLAY IMG COLORS ==================================
+
+.overlay-large-01 {
+    &:hover {
+        background-color: rgba(240,227,201, 0.7);
+    }
+}
+
+.overlay-large-02 {
+    &:hover {
+        background-color: rgba(254,222,202, 0.6);
+
+    }
+}
+
+.overlay-small-01 {
+    &:hover {
+        background-color: rgba(233,146,158, 0.8);
+
+    }
+}
+
+.overlay-small-02 {
+    &:hover {
+        background-color: rgba(212,229,203, 0.8);
+
+    }
+}
+
+.overlay-small-03 {
+    &:hover {
+        background-color: rgba(255,182,193, 0.7);
+    }
+}
+
+.overlay-small-04 {
+    &:hover {
+        background-color: rgba(94,159,158, 0.7);
+    }
+}
+
+.overlay-explore-01 {
+    &:hover {
+        background-color: rgba(216,185,221, 0.8);
+
+    }
+}
+
+.overlay-explore-02 {
+    &:hover {
+        background-color: rgba(233,146,158, 0.8);
+
+    }
+}
 

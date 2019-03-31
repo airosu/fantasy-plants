@@ -172,7 +172,7 @@
                                 <img class="product__image" src="images/products1/product1.png" alt="">
                             </div>
                             <div class="product__wishlist-container">
-                                <i class="product__wishlist-heart">X</i>
+                                <i class="product__wishlist-heart icon-heart-empty-1"></i>
                             </div>
                             <div class="product__title-container">
                                 <a class="product__title">Product Title Or Something</a>
@@ -188,7 +188,7 @@
                                 <img class="product__image jar-wrap" src="images/products1/jar03.png" alt="">
                             </div>
                             <div class="product__wishlist-container">
-                                <i class="product__wishlist-heart">X</i>
+                                <i class="product__wishlist-heart icon-heart-empty-1"></i>
                             </div>
                             <div class="product__title-container">
                                 <a class="product__title">Product Title Or Something</a>
@@ -206,7 +206,7 @@
                                 <img class="product__image" src="images/products1/product7.png" alt="">
                             </div>
                             <div class="product__wishlist-container">
-                                <i class="product__wishlist-heart">X</i>
+                                <i class="product__wishlist-heart icon-heart-empty-1"></i>
                             </div>
                             <div class="product__title-container">
                                 <a class="product__title">Product Title Or Something</a>
@@ -222,7 +222,7 @@
                                 <img class="product__image" src="images/products1/dec9.png" alt="">
                             </div>
                             <div class="product__wishlist-container">
-                                <i class="product__wishlist-heart">X</i>
+                                <i class="product__wishlist-heart icon-heart-empty-1"></i>
                             </div>
                             <div class="product__title-container">
                                 <a class="product__title">Product Title Or Something</a>
@@ -242,7 +242,9 @@
     <section class="options-section">
         <div class="options__main-container">
             <div class="options__image-container">
-                <img class="options__image" src="images/options/option1.jpg" alt="">
+                <div class="options__image-wrapper">
+                    <img class="options__image" src="images/options/option1.jpg" alt="">
+                </div>
                 <div class="options__image-dark-overlay"></div>
                 <div class="options__image-text-overlay">
                     <div class="options__image-text">
@@ -252,7 +254,9 @@
                 </div>
             </div>
             <div class="options__image-container">
-                <img class="options__image" src="images/options/option2.jpg" alt="">
+                <div class="options__image-wrapper">
+                    <img class="options__image" src="images/options/option2.jpg" alt="">
+                </div>
                 <div class="options__image-dark-overlay"></div>
                 <div class="options__image-text-overlay">
                     <div class="options__image-text">
@@ -262,7 +266,9 @@
                 </div>
             </div>
             <div class="options__image-container">
-                <img class="options__image" src="images/options/option3.jpg" alt="">
+                <div class="options__image-wrapper">
+                    <img class="options__image" src="images/options/option3.jpg" alt="">
+                </div>
                 <div class="options__image-dark-overlay"></div>
                 <div class="options__image-text-overlay">
                     <div class="options__image-text">
@@ -285,7 +291,7 @@
                             <img class="product__image" src="images/products1/product8.png" alt="">
                         </div>
                         <div class="product__wishlist-container">
-                            <i class="product__wishlist-heart">X</i>
+                            <i class="product__wishlist-heart icon-heart-empty-1"></i>
                         </div>
                         <div class="product__title-container">
                             <a class="product__title">Product Title Or Something</a>
@@ -299,7 +305,7 @@
                             <img class="product__image" src="images/products1/product2.png" alt="">
                         </div>
                         <div class="product__wishlist-container">
-                            <i class="product__wishlist-heart">X</i>
+                            <i class="product__wishlist-heart icon-heart-empty-1"></i>
                         </div>
                         <div class="product__title-container">
                             <a class="product__title">Product Title Or Something</a>
@@ -315,7 +321,7 @@
                             <img class="product__image" src="images/products1/product4.png" alt="">
                         </div>
                         <div class="product__wishlist-container">
-                            <i class="product__wishlist-heart">X</i>
+                            <i class="product__wishlist-heart icon-heart-empty-1"></i>
                         </div>
                         <div class="product__title-container">
                             <a class="product__title">Product Title Or Something</a>
@@ -329,7 +335,7 @@
                             <img class="product__image" src="images/products1/product3.png" alt="">
                         </div>
                         <div class="product__wishlist-container">
-                            <i class="product__wishlist-heart">X</i>
+                            <i class="product__wishlist-heart icon-heart-empty-1"></i>
                         </div>
                         <div class="product__title-container">
                             <a class="product__title">Product Title Or Something</a>
@@ -367,52 +373,116 @@
             <div class="explore__container">
                 <div class="explore__left-section">
                     <div class="explore__large-image-wrapper--left">
-                        <picture class="explore__large-image-picture">
+                        <div class="explore__large-image-picture">
                             <div class="explore__large-image-container">
-                                <img src="images/explore/large2-desktop.jpg" alt="" class="explore__large-image">
-                                <div class="explore__overlay"></div>
+                                <picture>
+                                    <source srcset="images/explore/large2-mobile.jpg" media="(max-width: 1024px)">
+                                    <img src="images/explore/large2-desktop.jpg" alt="" class="explore__large-image">
+                                    <div class="explore__overlay overlay-large-01">
+                                        <div class="explore__overlay-text-lg">
+                                            <a class="explore__overlay-text-wrapper">
+                                                <p class="explore__overlay-text-category">Accessories</p>
+                                                <h3 class="explore__overlay-text-description-lg">Some text goes here 123 lorem 12</h3>
+                                                <p class="explore__overlay-text-link">Buy Now!</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </picture>
                             </div>
-                        </picture>
+                        </div>
                     </div>
 
                     <div class="explore__small-images-wrapper explore__small-images-wrapper--left">
-                        <picture class="explore__small-image-picture">
+                        <div class="explore__small-image-picture">
                             <div class="explore__small-image-container">
-                                <img src="images/explore/small5-desktop.jpg" alt="" class="explore__small-image">
-                                <div class="explore__overlay"></div>
+                                <picture>
+                                    <source srcset="images/explore/small5-mobile.jpg" media="(max-width: 1024px)">
+                                    <img src="images/explore/small5-desktop.jpg" alt="" class="explore__small-image">
+                                    <div class="explore__overlay overlay-small-01">
+                                        <div class="explore__overlay-text-sm">
+                                            <a class="explore__overlay-text-wrapper">
+                                                <h3 class="explore__overlay-text-description-sm">Some text goes here 123 lorem 12</h3>
+                                                <p class="explore__overlay-text-link">Buy Now!</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </picture>
                             </div>
-                        </picture>
-                        <picture class="explore__small-image-picture">
+                        </div>
+                        <div class="explore__small-image-picture">
                             <div class="explore__small-image-container">
+                                <picture>
+                                <source srcset="images/explore/small2-mobile.jpg" media="(max-width: 1024px)">
                                 <img src="images/explore/small2-desktop.jpg" alt="" class="explore__small-image">
-                                <div class="explore__overlay"></div>
+                                    <div class="explore__overlay overlay-small-02">
+                                        <div class="explore__overlay-text-sm">
+                                            <a class="explore__overlay-text-wrapper">
+                                                <h3 class="explore__overlay-text-description-sm">Some text goes here 123 lorem 12</h3>
+                                                <p class="explore__overlay-text-link">Buy Now!</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </picture>
                             </div>
-                        </picture>
+                        </div>
                     </div>
                 </div>
+
+
                 <div class="explore__right-section">
                         <div class="explore__small-images-wrapper">
-                                <picture class="explore__small-image-picture">
+                                <div class="explore__small-image-picture">
                                     <div class="explore__small-image-container">
-                                        <img src="images/explore/small3-desktop.jpg" alt="" class="explore__small-image">
-                                        <div class="explore__overlay"></div>
+                                        <picture>
+                                            <source srcset="images/explore/small3-mobile.jpg" media="(max-width: 1024px)">
+                                            <img src="images/explore/small3-desktop.jpg" alt="" class="explore__small-image">
+                                            <div class="explore__overlay overlay-small-03">
+                                                <div class="explore__overlay-text-sm">
+                                                    <a class="explore__overlay-text-wrapper">
+                                                        <h3 class="explore__overlay-text-description-sm">Some text goes here 123 lorem 12</h3>
+                                                        <p class="explore__overlay-text-link">Buy Now!</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </picture>
                                     </div>
-                                </picture>
-                                <picture class="explore__small-image-picture">
+                                </div>
+                                <div class="explore__small-image-picture">
                                     <div class="explore__small-image-container">
-                                        <img src="images/explore/small1-desktop.jpg" alt="" class="explore__small-image">
-                                        <div class="explore__overlay"></div>
+                                        <picture>
+                                            <source srcset="images/explore/small1-mobile.jpg" media="(max-width: 1024px)">
+                                            <img src="images/explore/small1-desktop.jpg" alt="" class="explore__small-image">
+                                            <div class="explore__overlay overlay-small-04">
+                                                <div class="explore__overlay-text-sm">
+                                                    <a class="explore__overlay-text-wrapper">
+                                                        <h3 class="explore__overlay-text-description-sm">Some text goes here 123 lorem 12</h3>
+                                                        <p class="explore__overlay-text-link">Buy Now!</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </picture>
                                     </div>
-                                </picture>
+                                </div>
                             </div>
 
                     <div class="explore__large-image-wrapper--right">
-                        <picture class="explore__large-image-picture">
+                        <div class="explore__large-image-picture">
                             <div class="explore__large-image-container">
-                                <img src="images/explore/large3-desktop.jpg" alt="" class="explore__large-image">
-                                <div class="explore__overlay"></div>
+                                <picture>
+                                    <source srcset="images/explore/large3-mobile.jpg" media="(max-width: 1024px)">
+                                    <img src="images/explore/large3-desktop.jpg" alt="" class="explore__large-image">
+                                    <div class="explore__overlay overlay-large-02">
+                                        <div class="explore__overlay-text-lg">
+                                            <a class="explore__overlay-text-wrapper">
+                                                <p class="explore__overlay-text-category">Accessories</p>
+                                                <h3 class="explore__overlay-text-description-lg">Some text goes here 123 lorem 12</h3>
+                                                <p class="explore__overlay-text-link">Buy Now!</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </picture>
                             </div>
-                        </picture>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -431,7 +501,7 @@
                             <img class="product__image decoration" src="images/products1/dec1.png" alt="">
                         </div>
                         <div class="product__wishlist-container">
-                            <i class="product__wishlist-heart">X</i>
+                            <i class="product__wishlist-heart icon-heart-empty-1"></i>
                         </div>
                         <div class="product__title-container">
                             <a class="product__title">Product Title Or Something</a>
@@ -445,7 +515,7 @@
                             <img class="product__image" src="images/products1/product2.png" alt="">
                         </div>
                         <div class="product__wishlist-container">
-                            <i class="product__wishlist-heart">X</i>
+                            <i class="product__wishlist-heart icon-heart-empty-1"></i>
                         </div>
                         <div class="product__title-container">
                             <a class="product__title">Product Title Or Something</a>
@@ -461,7 +531,7 @@
                             <img class="product__image" src="images/products1/product4.png" alt="">
                         </div>
                         <div class="product__wishlist-container">
-                            <i class="product__wishlist-heart">X</i>
+                            <i class="product__wishlist-heart icon-heart-empty-1"></i>
                         </div>
                         <div class="product__title-container">
                             <a class="product__title">Product Title Or Something</a>
@@ -475,7 +545,7 @@
                             <img class="product__image" src="images/products1/product6.png" alt="">
                         </div>
                         <div class="product__wishlist-container">
-                            <i class="product__wishlist-heart">X</i>
+                            <i class="product__wishlist-heart icon-heart-empty-1"></i>
                         </div>
                         <div class="product__title-container">
                             <a class="product__title">Product Title Or Something</a>
@@ -529,7 +599,7 @@
                     </div>
                     <div class="light__right-section">
                         <div class="light__image-container">
-                            <img class="light__image jar-light" src="images/products/jar1.png" alt="">
+                            <img class="light__image jar-wrap-lg" src="images/products1/jar01.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -556,7 +626,9 @@
                         </div>
                     </div>
                     <div class="light__right-section">
-                        <img class="light__image jar-light" src="images/products/jar2.png" alt="">
+                        <div class="light__image-container">
+                            <img class="light__image jar-wrap" src="images/products1/jar02.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -582,7 +654,9 @@
                         </div>
                     </div>
                     <div class="light__right-section">
-                        <img class="light__image jar-light" src="images/products/jar3.png" alt="">
+                        <div class="light__image-container">
+                            <img class="light__image jar-wrap" src="images/products1/jar03.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -608,7 +682,9 @@
                         </div>
                     </div>
                     <div class="light__right-section">
-                        <img class="light__image jar-light" src="images/products/jar4.png" alt="">
+                        <div class="light__image-container">
+                            <img class="light__image jar-wrap-lg" src="images/products1/jar04.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -632,7 +708,7 @@
                             <img class="product__image" src="images/products1/tree2.png" alt="">
                         </div>
                         <div class="product__wishlist-container">
-                            <i class="product__wishlist-heart">X</i>
+                            <i class="product__wishlist-heart icon-heart-empty-1"></i>
                         </div>
                         <div class="product__title-container">
                             <a class="product__title">Product Title Or Something</a>
@@ -646,7 +722,7 @@
                             <img class="product__image" src="images/products1/product5.png" alt="">
                         </div>
                         <div class="product__wishlist-container">
-                            <i class="product__wishlist-heart">X</i>
+                            <i class="product__wishlist-heart icon-heart-empty-1"></i>
                         </div>
                         <div class="product__title-container">
                             <a class="product__title">Product Title Or Something</a>
@@ -662,7 +738,7 @@
                             <img class="product__image" src="images/products1/dec10.png" alt="">
                         </div>
                         <div class="product__wishlist-container">
-                            <i class="product__wishlist-heart">X</i>
+                            <i class="product__wishlist-heart icon-heart-empty-1"></i>
                         </div>
                         <div class="product__title-container">
                             <a class="product__title">Product Title Or Something</a>
@@ -676,7 +752,7 @@
                             <img class="product__image" src="images/products1/dec5.png" alt="">
                         </div>
                         <div class="product__wishlist-container">
-                            <i class="product__wishlist-heart">X</i>
+                            <i class="product__wishlist-heart icon-heart-empty-1"></i>
                         </div>
                         <div class="product__title-container">
                             <a class="product__title">Product Title Or Something</a>
