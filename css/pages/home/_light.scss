@@ -99,9 +99,16 @@
 
     &__image-container {
         width: 100%;
+
+        &:hover {
+            img {
+                transform: scale(0.93);
+            }
+        }
     }
     &__image {
         width: 250px;
+        transition: all 0.5s;
     }
 
 }

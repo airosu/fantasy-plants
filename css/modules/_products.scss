@@ -10,9 +10,16 @@
         width: 100%;
         padding-bottom: 0px;
         position: relative;
+
+        &:hover {
+            img {
+                transform: scale(0.93);
+            }
+        }
     }
     &__image {
         width: 100%;
+        transition: all 0.5s;
     }
 
 
@@ -74,6 +81,18 @@
     max-width: 95px;
     width: 100%;
     margin: 20px auto 50px auto;
+}
+
+.jar-wrap {
+    max-width: 190px;
+    width: 100%;
+    margin: auto;
+}
+
+.jar-wrap-lg {
+    max-width: 170px;
+    width: 100%;
+    margin: auto;
 }
 
 .decoration {
