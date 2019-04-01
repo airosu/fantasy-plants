@@ -40,6 +40,7 @@
             width: 100%;
             margin: 0 auto;
             margin-bottom: 50px;
+            justify-content: space-around;
         }
     }
 
@@ -54,6 +55,7 @@
             width: 100%;
             margin: 0 auto;
             margin-bottom: 50px;
+            justify-content: space-around;
         }
     }
 }
@@ -63,8 +65,8 @@
 
 .best-product {
     @media (max-width: 1024px) {
-        width: 380px;
-        margin: 0 26px 0 auto;
+        max-width: 380px;
+        // margin: 0 35px;
     }
 
     
