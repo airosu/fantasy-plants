@@ -16,4 +16,26 @@
         object-fit: cover;
         object-position: 0 0px;
     }
+
+    &__text-container {
+        position: absolute;
+        top: 330px;
+        left: 90px;
+        color: #ddd;
+        max-width: 350px;
+        text-align: center;
+    }
+
+    &__heading {
+        font-size: 50px;
+        font-family: 'Srisakdi', cursive;
+        margin-bottom: 30px;
+    }
+
+    &__description {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 30px;
+    }
 }
+
