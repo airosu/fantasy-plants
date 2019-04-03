@@ -19,7 +19,9 @@
         object-fit: cover;
 
         @media (max-width: 1024px) {
-            object-position: 0 0;
+            // object-position: 0 0;
+            // object-fit: unset;
+            // height: auto;
         }
     }
 }
