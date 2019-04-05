@@ -19,11 +19,16 @@
 
     &__text-container {
         position: absolute;
-        top: 330px;
-        left: 90px;
+        top: 440px;
+        left: 218px;
         color: #ddd;
         max-width: 350px;
         text-align: center;
+
+        @media (max-width: 1024px) {
+            top: 90px;
+            left: 14px;
+        }
     }
 
     &__heading {
