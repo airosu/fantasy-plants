@@ -11,6 +11,8 @@
 </head>
 <body>
     <header class="header">
+
+
         <!-- Utility Bar -->
         <div class="utility-bar">
             <div class="utility-bar__left">
@@ -50,19 +52,19 @@
             <nav class="navigation-bar__main">
                 <ul class="navigation-bar__menu">
                     <li class="navigation-bar__item">
-                        <a href="#" class="navigation-bar__link nav-link">Shop</a>
+                        <a href="#" class="navigation-bar__link nav-link">Discovery</a>
                     </li>
                     <li class="navigation-bar__item">
-                        <a href="#" class="navigation-bar__link nav-link">Link2</a>
+                        <a href="#" class="navigation-bar__link nav-link">Best Sellers</a>
                     </li>
                     <li class="navigation-bar__item">
-                        <a href="#" class="navigation-bar__link nav-link">Something 3</a>
+                        <a href="#" class="navigation-bar__link nav-link">Explore</a>
                     </li>
                     <li class="navigation-bar__item">
-                        <a href="#" class="navigation-bar__link nav-link">Another Link 4</a>
+                        <a href="#" class="navigation-bar__link nav-link">Lighting</a>
                     </li>
                     <li class="navigation-bar__item">
-                        <a href="#" class="navigation-bar__link nav-link">Link5</a>
+                        <a href="#" class="navigation-bar__link nav-link">Subscribe</a>
                     </li>
                 </ul>
             </nav>
@@ -92,7 +94,7 @@
 
 
         <!-- Create Section -->
-    <section class="create-section section-block">
+    <section class="create-section section-block id" id="intro">
         <div class="create__main-container">
             <div class="create__left-section">
                 <div class="create__details">
@@ -563,11 +565,14 @@
         <!-- Promo Banner Section -->
         <section class="promo-banner-section">
             <div class="promo__main-content">
-                <img class="promo__image" src="images/berries_desktop.jpg" alt="">
-                <div class="promo__text-container">
-                    <h2 class="promo__heading">Something</h2>
-                    <p class="promo__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum molestiae possimus obcaecati!</p>
-                </div>
+                <picture>
+                    <source srcset="images/berries_mobile.jpg" media="(max-width: 1024px)">
+                    <img class="promo__image" src="images/berries_desktop2.jpg" alt="">
+                    <div class="promo__text-container">
+                        <h2 class="promo__heading">Something</h2>
+                        <p class="promo__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum molestiae possimus obcaecati!</p>
+                    </div>
+                </picture>
             </div>
         </section> <!-- Promo Banner Section END -->
 
@@ -821,11 +826,24 @@
         </div>
     </section> <!-- Subscribe Section END-->
     </main>
-    <footer>
-        <div class="temp">
-            <h3>WIP Footer</h3>
+
+
+    <!-- Footer -->
+    <footer> 
+        <div class="footer footer__nav">
+            <ul class="footer__menu">
+                <li class="footer__item"><a class="footer__link" href="#">Customer Care</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Media Enquiries</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Shipping & Delivery</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Returns</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Careers</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Privacy</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">My Business</a></li>
+            </ul>
         </div>
-    </footer>
+    </footer> <!-- Footer END-->
+
+
     <script src="js/main.js"></script>
 </body>
 </html>

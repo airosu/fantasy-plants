@@ -16,6 +16,12 @@
             img {
                 transform: scale(0.93);
             }
+
+            @media (max-width: 1024px) {
+                img {
+                    transform: none;
+                }
+            }
         }
     }
     &__image {
