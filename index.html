@@ -42,7 +42,7 @@
         <!-- Navigation Bar-->
         <div class="navigation-bar">
             <div class="navigation-bar__hamburger-container">
-                <a href="#" class="navigation-bar__hamburger-link"><i class="icon-menu"></i></a>
+                <a href="#" class="navigation-bar__hamburger-link"><i class="icon-menu hamburger-menu"></i></a>
             </div>
             <div class="navigation-bar__left">
                 <div class="navigation-bar__logo-container">
@@ -52,7 +52,7 @@
             <nav class="navigation-bar__main">
                 <ul class="navigation-bar__menu">
                     <li class="navigation-bar__item">
-                        <a href="#" class="navigation-bar__link nav-link">Discovery</a>
+                        <a href="#" data-target="#discovery" class="navigation-bar__link nav-link test-link">Discovery</a>
                     </li>
                     <li class="navigation-bar__item">
                         <a href="#" class="navigation-bar__link nav-link">Best Sellers</a>
@@ -67,6 +67,15 @@
                         <a href="#" class="navigation-bar__link nav-link">Subscribe</a>
                     </li>
                 </ul>
+                <div class="navigation-bar__social-container">
+                    <div class="navigation-bar__social-icons">
+                        <a class="navigation-bar__social-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="navigation-bar__social-link" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="navigation-bar__social-link" href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a class="navigation-bar__social-link" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="navigation-bar__social-link" href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
             </nav>
             <div class="navigation-bar__right">
                 <div class="navigation-bar__search-container">
@@ -94,7 +103,7 @@
 
 
         <!-- Create Section -->
-    <section class="create-section section-block id" id="intro">
+    <section class="create-section section-block id" id="discovery">
         <div class="create__main-container">
             <div class="create__left-section">
                 <div class="create__details">
@@ -845,6 +854,7 @@
 
 
     <script src="js/main.js"></script>
+    <script src="js/eventListener.js"></script>
 </body>
 </html>
 
