@@ -254,6 +254,14 @@ body {
   background-color: #f6f3ec;
 }
 
+.product__wishlist-heart {
+  cursor: pointer;
+}
+
+.product__wishlist-heart.active::before, .product__wishlist-heart:hover::before {
+  content: '\e80d';
+}
+
 .best-sellers-section {
   padding: 0 30px;
 }
@@ -2049,6 +2057,13 @@ body {
 
 .subscribe__email-submit:focus {
   outline: none;
+}
+
+.subscribe__email-label {
+  margin-top: 10px;
+  margin-left: 20px;
+  display: block;
+  color: red;
 }
 
 .subscribe__social-container {

@@ -52,19 +52,19 @@
             <nav class="navigation-bar__main">
                 <ul class="navigation-bar__menu">
                     <li class="navigation-bar__item">
-                        <a href="#" data-target="#discovery" class="navigation-bar__link nav-link test-link">Discovery</a>
+                        <a href="#" data-target="#discovery" data-offset="-173" class="navigation-bar__link nav-link test-link">Discovery</a>
                     </li>
                     <li class="navigation-bar__item">
-                        <a href="#" class="navigation-bar__link nav-link">Best Sellers</a>
+                        <a href="#" data-target="#bestsellers" data-offset="-125" class="navigation-bar__link nav-link">Best Sellers</a>
                     </li>
                     <li class="navigation-bar__item">
-                        <a href="#" class="navigation-bar__link nav-link">Explore</a>
+                        <a href="#" data-target="#explore" data-offset="-145" class="navigation-bar__link nav-link">Explore</a>
                     </li>
                     <li class="navigation-bar__item">
-                        <a href="#" class="navigation-bar__link nav-link">Lighting</a>
+                        <a href="#" data-target="#lighting" data-offset="-70" class="navigation-bar__link nav-link">Lighting</a>
                     </li>
                     <li class="navigation-bar__item">
-                        <a href="#" class="navigation-bar__link nav-link">Subscribe</a>
+                        <a href="#" data-target="#subscribe" class="navigation-bar__link nav-link">Subscribe</a>
                     </li>
                 </ul>
                 <div class="navigation-bar__social-container">
@@ -250,7 +250,7 @@
 
 
     <!-- Options Sections -->
-    <section class="options-section">
+    <section class="options-section" id="bestsellers">
         <div class="options__main-container">
             <div class="options__image-container">
                 <div class="options__image-wrapper">
@@ -302,7 +302,9 @@
                             <img class="product__image" src="images/products1/product8.png" alt="">
                         </div>
                         <div class="product__wishlist-container">
-                            <i class="product__wishlist-heart icon-heart-empty-1"></i>
+                            <a class="product__wishilit-link">
+                                <i class="product__wishlist-heart icon-heart-empty-1"></i>
+                            </a>
                         </div>
                         <div class="product__title-container">
                             <a class="product__title">Product Title Or Something</a>
@@ -376,7 +378,7 @@
 
 
         <!-- Explore Section -->
-        <section class="explore-section section-wrapper">
+        <section class="explore-section section-wrapper" id="explore">
             <div class="section-text">
                 <h2 class="section-text__title">Title Text</h2>
                 <p class="section-text__description">Some description goes here</p>
@@ -572,7 +574,7 @@
 
 
         <!-- Promo Banner Section -->
-        <section class="promo-banner-section">
+        <section class="promo-banner-section" id="lighting">
             <div class="promo__main-content">
                 <picture>
                     <source srcset="images/berries_mobile.jpg" media="(max-width: 1024px)">
@@ -782,7 +784,7 @@
 
 
     <!-- Subscribe Section -->
-    <section class="subscribe-section">
+    <section class="subscribe-section" id="subscribe">
         <div class="subscribe__main-container">
             <div class="subscribe__contact-container">
                 <div class="subscribe__text-container">

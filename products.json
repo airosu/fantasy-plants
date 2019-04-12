@@ -7,7 +7,84 @@
         "price": ""
     },
     {
-        "id": "",
+        "id": "1",
+        "name": "Umbrella Tree",
+        "description": "",
+        "tags": "dec, tree, decoration, indoor",
+        "price": "199.89"
+    },
+    {
+        "id": "2",
+        "name": "Outdoor Torch",
+        "description": "",
+        "tags": "outdoor, torch, fire",
+        "price": "274.99"
+    },
+    {
+        "id": "3",
+        "name": "Floating Island",
+        "description": "",
+        "tags": "float, island, outdoor, nature, rock",
+        "price": "300.00"
+    },
+    {
+        "id": "4",
+        "name": "Stone Greenery",
+        "description": "",
+        "tags": "stone, plant, outside, outdoor, decoration,",
+        "price": "349.99"
+    },
+    {
+        "id": "5",
+        "name": "Dream Gate",
+        "description": "",
+        "tags": "stone, outside, outdoors, nature, garden",
+        "price": "1200.00"
+    },
+    {
+        "id": "6",
+        "name": "Garden Lamp - Pole",
+        "description": "",
+        "tags": "garden, lamp, decoration, outside, outdoors, light",
+        "price": "89.99"
+    },
+    {
+        "id": "7",
+        "name": "Agave",
+        "description": "outside, outdoor, garden, plant, spikey",
+        "tags": "",
+        "price": "50.00"
+    },
+    {
+        "id": "8",
+        "name": "Giant Mushrooms",
+        "description": "",
+        "tags": "decoration, mushrooms",
+        "price": "199.99"
+    },
+    {
+        "id": "9",
+        "name": "Full Garden Set",
+        "description": "",
+        "tags": "garden, stone, outside, outdoors",
+        "price": "1499.99"
+    },
+    {
+        "id": "10",
+        "name": "Fantasy Moongate",
+        "description": "",
+        "tags": "stone, garden, outdoors, outside",
+        "price": "899.89"
+    },
+    {
+        "id": "11",
+        "name": "Mushroom Set",
+        "description": "",
+        "tags": "mushroom, garden, decoration, outside, outdoors",
+        "price": "112.99"
+    },
+    {
+        "id": "Garden Lamp - Umbrella",
         "name": "",
         "description": "",
         "tags": "",
