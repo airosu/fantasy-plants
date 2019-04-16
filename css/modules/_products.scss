@@ -1,3 +1,18 @@
+// ================================== HEART ICONS ==============================
+.product {
+    &__wishlist-heart {
+        cursor: pointer;
+        &.active,
+        &:hover {
+            &::before {
+                content: '\e80d';
+            }
+        }
+    }
+}
+
+
+// =============================== STRUCTURE / STYLE ==========================
 .best-sellers-section {
     padding: 0 30px;
 }

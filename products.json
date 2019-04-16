@@ -1,17 +1,206 @@
 [
     {
-        "id": "",
-        "name": "",
+        "id": "1",
+        "name": "Umbrella Tree",
         "description": "",
-        "tags": "",
-        "price": ""
+        "tags": "dec, tree, decoration, indoor",
+        "price": "199.89"
     },
     {
-        "id": "",
-        "name": "",
+        "id": "2",
+        "name": "Outdoor Torch",
+        "description": "",
+        "tags": "outdoor, torch, fire",
+        "price": "274.99"
+    },
+    {
+        "id": "3",
+        "name": "Floating Island",
+        "description": "",
+        "tags": "float, island, outdoor, nature, rock",
+        "price": "300.00"
+    },
+    {
+        "id": "4",
+        "name": "Stone Greenery",
+        "description": "",
+        "tags": "stone, plant, outside, outdoor, decoration,",
+        "price": "349.99"
+    },
+    {
+        "id": "5",
+        "name": "Dream Gate",
+        "description": "",
+        "tags": "stone, outside, outdoors, nature, garden",
+        "price": "1200.00"
+    },
+    {
+        "id": "6",
+        "name": "Garden Lamp - Pole",
+        "description": "",
+        "tags": "garden, lamp, decoration, outside, outdoors, light",
+        "price": "89.99"
+    },
+    {
+        "id": "7",
+        "name": "Agave",
+        "description": "outside, outdoor, garden, plant, spikey",
+        "tags": "",
+        "price": "50.00"
+    },
+    {
+        "id": "8",
+        "name": "Giant Mushrooms",
+        "description": "",
+        "tags": "decoration, mushrooms",
+        "price": "199.99"
+    },
+    {
+        "id": "9",
+        "name": "Full Garden Set",
+        "description": "",
+        "tags": "garden, stone, outside, outdoors",
+        "price": "1499.99"
+    },
+    {
+        "id": "10",
+        "name": "Fantasy Moongate",
+        "description": "",
+        "tags": "stone, garden, outdoors, outside",
+        "price": "899.89"
+    },
+    {
+        "id": "11",
+        "name": "Mushroom Set",
+        "description": "",
+        "tags": "mushroom, garden, decoration, outside, outdoors",
+        "price": "112.99"
+    },
+    {
+        "id": "12",
+        "name": "Garden Lamp - Umbrella",
+        "description": "",
+        "tags": "garden, outside, outdoors, lamp, light, umbrella",
+        "price": "99.89"
+    },
+    {
+        "id": "13",
+        "name": "Garden Gnome House",
+        "description": "",
+        "tags": "outside, outdoors, decoration, stone",
+        "price": "299.79"
+    },
+    {
+        "id": "14",
+        "name": "Garden Well Decoration",
+        "description": "",
+        "tags": "garden, well, decoration, water, outside, outdoors",
+        "price": "799.00"
+    },
+    {
+        "id": "15",
+        "name": "Garden Swing",
+        "description": "",
+        "tags": "garden, outside, outdoors",
+        "price": "499.00"
+    },
+    {
+        "id": "16",
+        "name": "Blue Moon",
+        "description": "",
+        "tags": "jar, light",
+        "price": "79.00"
+    },
+    {
+        "id": "17",
+        "name": "Snow White",
+        "description": "",
+        "tags": "jar, light",
+        "price": "79.00"
+    },
+    {
+        "id": "18",
+        "name": "Ocean's Light",
+        "description": "",
+        "tags": "jar, light",
+        "price": "79.00"
+    },
+    {
+        "id": "19",
+        "name": "Dusk Ambience",
+        "description": "",
+        "tags": "jar, light",
+        "price": "79.0"
+    },
+    {
+        "id": "20",
+        "name": "Office Feria",
+        "description": "",
+        "tags": "plants, office, indoors, green, forest",
+        "price": "89.99"
+    },
+    {
+        "id": "21",
+        "name": "Morrowind Ascadian Isles",
+        "description": "",
+        "tags": "indoor, pot, plants, green, island",
+        "price": "299.00"
+    },
+    {
+        "id": "22",
+        "name": "Paper Rose Table Ornament",
+        "description": "",
+        "tags": "rose, flower, ornament, decoration",
+        "price": "49.99"
+    },
+    {
+        "id": "23",
+        "name": "Buxus Topiary Round",
+        "description": "",
+        "tags": "outdoors, exterior, garden, display, green, tree",
+        "price": "129.89"
+    },
+    {
+        "id": "24",
+        "name": "Entrance Display Pyramid Buxus",
+        "description": "",
+        "tags": "outdoor, exterior, garden, green, tree, plant",
+        "price": "149.99"
+    },
+    {
+        "id": "25",
+        "name": "Gladious Decor",
+        "description": "",
+        "tags": "decoration, home, indoor, pot, plant",
+        "price": "89.00"
+    },
+    {
+        "id": "26",
+        "name": "Narcissus Cantabricus Arrangement",
+        "description": "",
+        "tags": "indoors, flower, pot, decor, home",
+        "price": "74.50"
+    },
+    {
+        "id": "27",
+        "name": "Tropical Palm Tree",
+        "description": "",
+        "tags": "trees, garden, outdoors, outisde, exterior,",
+        "price": "599.00"
+    },
+    {
+        "id": "28",
+        "name": "Hanging Lights Tree",
+        "description": "",
+        "tags": "trees, outside, outdoors, exterior, garden",
+        "price": "499.00"
+    },
+    {
+        "id": "29",
+        "name": "Spiked Forest Tree",
         "description": "",
         "tags": "",
-        "price": ""
-    }
+        "price": "199.00"
+    }   
 ]
 

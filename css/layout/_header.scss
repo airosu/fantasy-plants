@@ -59,6 +59,106 @@
     font-size: 20px;
 }
 
+// ================================ SEARCH ===============================
+
+.search-dropdown {
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    top: 113px;
+    background-color: #fff;
+    border-bottom: 2px solid $color-light-grey;
+    // z-index: 2;
+
+    &.show {
+        display: block;
+    }
+
+
+
+    &__main-content {
+        height: 100%;
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__form {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+
+    &__form-input {
+        font-family: 'Montserrat', sans-serif;
+        margin: auto 0;
+        font-size: 30px;
+        padding: 0 30px;
+        color: $color-main;
+        background-color: #fff;
+        border: none;
+        width: 75%;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+
+    &__form-submit {
+        padding: 0 30px;
+        font-size: 30px;
+        color: $color-main;
+        background-color: #fff;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+
+
+
+    
+
+    &__results {
+        // display: none;
+        width: 100%;
+        height: 400px;
+        background-color: #fff;
+        position: absolute;
+        bottom: -400px;
+        left: 0;
+        right: 0;
+        // display: flex;
+        border-bottom: 2px solid $color-light-grey;
+
+        &.show {
+            display: flex;
+        }
+    }
+
+
+    &__results-container {
+        border-top: 1px solid $color-light-grey;
+        padding-top: 30px;
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    
+    &__products {
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+}
+
+
 
 // ================================ LAYOUT ===============================
 
