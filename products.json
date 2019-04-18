@@ -3,7 +3,8 @@
         "id": "1",
         "name": "Umbrella Tree",
         "description": "",
-        "tags": "dec, tree, decoration, indoor",
+        "tags": "dec, tree, decoration",
+        "src": "images/products/1.png",
         "price": "199.89"
     },
     {
@@ -11,6 +12,7 @@
         "name": "Outdoor Torch",
         "description": "",
         "tags": "outdoor, torch, fire",
+        "src": "images/products/2.png",
         "price": "274.99"
     },
     {
@@ -18,6 +20,7 @@
         "name": "Floating Island",
         "description": "",
         "tags": "float, island, outdoor, nature, rock",
+        "src": "images/products/3.png",
         "price": "300.00"
     },
     {
@@ -25,6 +28,7 @@
         "name": "Stone Greenery",
         "description": "",
         "tags": "stone, plant, outside, outdoor, decoration,",
+        "src": "images/products/4.png",
         "price": "349.99"
     },
     {
@@ -32,6 +36,7 @@
         "name": "Dream Gate",
         "description": "",
         "tags": "stone, outside, outdoors, nature, garden",
+        "src": "images/products/15.png",
         "price": "1200.00"
     },
     {
@@ -39,13 +44,15 @@
         "name": "Garden Lamp - Pole",
         "description": "",
         "tags": "garden, lamp, decoration, outside, outdoors, light",
+        "src": "images/products/6.png",
         "price": "89.99"
     },
     {
         "id": "7",
         "name": "Agave",
-        "description": "outside, outdoor, garden, plant, spikey",
-        "tags": "",
+        "description": "",
+        "tags": "outside, outdoor, garden, plant, spikey",
+        "src": "images/products/7.png",
         "price": "50.00"
     },
     {
@@ -53,6 +60,7 @@
         "name": "Giant Mushrooms",
         "description": "",
         "tags": "decoration, mushrooms",
+        "src": "images/products/8.png",
         "price": "199.99"
     },
     {
@@ -60,6 +68,7 @@
         "name": "Full Garden Set",
         "description": "",
         "tags": "garden, stone, outside, outdoors",
+        "src": "images/products/9.png",
         "price": "1499.99"
     },
     {
@@ -67,6 +76,7 @@
         "name": "Fantasy Moongate",
         "description": "",
         "tags": "stone, garden, outdoors, outside",
+        "src": "images/products/10.png",
         "price": "899.89"
     },
     {
@@ -74,6 +84,7 @@
         "name": "Mushroom Set",
         "description": "",
         "tags": "mushroom, garden, decoration, outside, outdoors",
+        "src": "images/products/11.png",
         "price": "112.99"
     },
     {
@@ -81,6 +92,7 @@
         "name": "Garden Lamp - Umbrella",
         "description": "",
         "tags": "garden, outside, outdoors, lamp, light, umbrella",
+        "src": "images/products/12.png",
         "price": "99.89"
     },
     {
@@ -88,6 +100,7 @@
         "name": "Garden Gnome House",
         "description": "",
         "tags": "outside, outdoors, decoration, stone",
+        "src": "images/products/13.png",
         "price": "299.79"
     },
     {
@@ -95,6 +108,7 @@
         "name": "Garden Well Decoration",
         "description": "",
         "tags": "garden, well, decoration, water, outside, outdoors",
+        "src": "images/products/14.png",
         "price": "799.00"
     },
     {
@@ -102,6 +116,7 @@
         "name": "Garden Swing",
         "description": "",
         "tags": "garden, outside, outdoors",
+        "src": "images/products/15.png",
         "price": "499.00"
     },
     {
@@ -109,6 +124,7 @@
         "name": "Blue Moon",
         "description": "",
         "tags": "jar, light",
+        "src": "images/products/16.png",
         "price": "79.00"
     },
     {
@@ -116,6 +132,7 @@
         "name": "Snow White",
         "description": "",
         "tags": "jar, light",
+        "src": "images/products/17.png",
         "price": "79.00"
     },
     {
@@ -123,6 +140,7 @@
         "name": "Ocean's Light",
         "description": "",
         "tags": "jar, light",
+        "src": "images/products/18.png",
         "price": "79.00"
     },
     {
@@ -130,6 +148,7 @@
         "name": "Dusk Ambience",
         "description": "",
         "tags": "jar, light",
+        "src": "images/products/19.png",
         "price": "79.0"
     },
     {
@@ -137,6 +156,7 @@
         "name": "Office Feria",
         "description": "",
         "tags": "plants, office, indoors, green, forest",
+        "src": "images/products/20.png",
         "price": "89.99"
     },
     {
@@ -144,6 +164,7 @@
         "name": "Morrowind Ascadian Isles",
         "description": "",
         "tags": "indoor, pot, plants, green, island",
+        "src": "images/products/21.png",
         "price": "299.00"
     },
     {
@@ -151,6 +172,7 @@
         "name": "Paper Rose Table Ornament",
         "description": "",
         "tags": "rose, flower, ornament, decoration",
+        "src": "images/products/22.png",
         "price": "49.99"
     },
     {
@@ -158,6 +180,7 @@
         "name": "Buxus Topiary Round",
         "description": "",
         "tags": "outdoors, exterior, garden, display, green, tree",
+        "src": "images/products/23.png",
         "price": "129.89"
     },
     {
@@ -165,6 +188,7 @@
         "name": "Entrance Display Pyramid Buxus",
         "description": "",
         "tags": "outdoor, exterior, garden, green, tree, plant",
+        "src": "images/products/24.png",
         "price": "149.99"
     },
     {
@@ -172,6 +196,7 @@
         "name": "Gladious Decor",
         "description": "",
         "tags": "decoration, home, indoor, pot, plant",
+        "src": "images/products/25.png",
         "price": "89.00"
     },
     {
@@ -179,6 +204,7 @@
         "name": "Narcissus Cantabricus Arrangement",
         "description": "",
         "tags": "indoors, flower, pot, decor, home",
+        "src": "images/products/26.png",
         "price": "74.50"
     },
     {
@@ -186,6 +212,7 @@
         "name": "Tropical Palm Tree",
         "description": "",
         "tags": "trees, garden, outdoors, outisde, exterior,",
+        "src": "images/products/27.png",
         "price": "599.00"
     },
     {
@@ -193,6 +220,7 @@
         "name": "Hanging Lights Tree",
         "description": "",
         "tags": "trees, outside, outdoors, exterior, garden",
+        "src": "images/products/28.png",
         "price": "499.00"
     },
     {
@@ -200,6 +228,7 @@
         "name": "Spiked Forest Tree",
         "description": "",
         "tags": "",
+        "src": "images/products/29.png",
         "price": "199.00"
     }   
 ]

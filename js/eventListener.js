@@ -2,6 +2,12 @@
 // =============================== MAIN CLICK EVENT LISTENER =================================
 
 document.addEventListener('click', event => {
+    const searchButton = document.querySelector('.navigation-bar__search-button');
+    const searchIcon = document.querySelector('.icon-search-blue');
+    const searchDropdown = document.querySelector('.search-dropdown');
+    const searchResults = document.querySelector('.search-dropdown__results');
+
+    console.log(event.target);
     
     // desktop nav
     if (event.target.classList.contains('navigation-bar__link')) {
@@ -9,7 +15,6 @@ document.addEventListener('click', event => {
         const offset = event.target.getAttribute("data-offset");
         scrollToAnchor(event.target, offset);
     }
-
 
 
     // mobile burger nav
@@ -23,6 +28,26 @@ document.addEventListener('click', event => {
     // products wishlist
     if (event.target.classList.contains('icon-heart-empty-1')) {
         event.target.classList.toggle('active');
+    }
+
+
+
+    // search desktop
+    if (event.target === searchIcon || event.target === searchButton) {
+        event.preventDefault();
+        searchDropdown.classList.toggle('show');
+        searchIcon.classList.toggle('close');
+        searchResults.classList.remove('show');
+        document.querySelector('.search-dropdown__no-results').classList.remove('show');
+        resetSearch();
+    }
+    if (searchDropdown.classList.contains('show')) {
+        if (event.target.closest('.search-dropdown') === null && event.target != searchIcon && event.target != searchButton) {
+            searchDropdown.classList.remove('show');
+            searchIcon.classList.remove('close');
+            searchResults.classList.remove('show');
+            document.querySelector('.search-dropdown__no-results').classList.remove('show');
+        }
     }
 });
 

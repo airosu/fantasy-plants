@@ -54,14 +54,27 @@
     font-size: 22px;
 }
 
-.icon-search-blue:before {
-    color: #333;
-    font-size: 20px;
+
+.icon-search-blue {
+    &:before {
+        color: #333;
+        font-size: 20px;
+    }
+
+    &.close {
+        &:before {
+            content: '\e805';
+            font-size: 24px;
+        }
+    }
 }
+
+
 
 // ================================ SEARCH ===============================
 
 .search-dropdown {
+    display: none;
     width: 100%;
     height: 75px;
     position: absolute;
@@ -124,12 +137,12 @@
     
 
     &__results {
-        // display: none;
+        display: none;
         width: 100%;
-        height: 400px;
+        height: 430px;
         background-color: #fff;
         position: absolute;
-        bottom: -400px;
+        bottom: -431px;
         left: 0;
         right: 0;
         // display: flex;
@@ -143,19 +156,49 @@
 
     &__results-container {
         border-top: 1px solid $color-light-grey;
-        padding-top: 30px;
+        padding: 30px 40px 10px 40px;
         max-width: 1400px;
         width: 100%;
         margin: 0 auto;
     }
 
-    
-    &__products {
+
+    &__results-products {
         display: flex;
         justify-content: space-around;
     }
 
+    @media (max-width: 1024px) {
+        display: none !important;
+    }
 
+
+
+
+    &__no-results {
+        width: 100%;
+        height: 210px;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        display: none;
+        background-color: #fff;
+        border-bottom: 2px solid $color-light-grey;
+        
+        &.show {
+            display: flex;
+        }
+    }
+
+    &__no-results-text {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+
+        font-size: 40px;
+        color: $color-main;
+
+    }
 }
 
 
@@ -462,6 +505,11 @@
         display: flex;
         margin: 0 30px 0 20px;
 
+        @media (max-width: 1024px) {
+            width: 80px;
+            justify-content: space-around;
+        }
+
         @media (max-width: 768px) {
             margin-right: 10px;
             width: 110px;
@@ -477,6 +525,10 @@
         width: 50%;
         height: 100%;
         display: flex;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
     }
 
     &__search-button {
@@ -504,6 +556,12 @@
         width: 50%;
         height: 100%;
         display: flex;
+
+        @media (max-width: 1024px) {
+            width: 90%;
+            justify-content: space-around;
+        }
+
     }
 
     &__bag-button {
