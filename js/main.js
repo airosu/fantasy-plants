@@ -1,3 +1,5 @@
+
+
 // ================================= SCROLL ANIMATION ==========================
 
 let scrollToAnchor = function(element, offset=0) {
@@ -12,6 +14,11 @@ let scrollToAnchor = function(element, offset=0) {
 
     window.scrollBy({ top: originalTop, left: 0, behavior: "smooth" });
 }
+
+
+
+
+
 
 
 
@@ -61,7 +68,7 @@ let searchResults = function(input) {
 
 
 
-// --- Event Listener ---
+// --- Search Event Listener ---
 searchForm.addEventListener('submit', function(event) {
     event.preventDefault();
     let searchValue = searchInput.value;
@@ -72,4 +79,14 @@ searchForm.addEventListener('submit', function(event) {
 
     console.log(searchValue);
 });
+
+
+
+
+
+
+
+
+
+// ================================= MINICART ==========================
 

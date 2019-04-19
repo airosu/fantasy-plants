@@ -2,14 +2,17 @@
 // =============================== MAIN CLICK EVENT LISTENER =================================
 
 document.addEventListener('click', event => {
-    const searchButton = document.querySelector('.navigation-bar__search-button');
+    const bagIcon = document.getElementById('bag');
+    const bagButton = document.querySelector('.navigation-bar__bag-button');
+    const minicart = document.querySelector('.minicart');
     const searchIcon = document.querySelector('.icon-search-blue');
+    const searchButton = document.querySelector('.navigation-bar__search-button');
     const searchDropdown = document.querySelector('.search-dropdown');
     const searchResults = document.querySelector('.search-dropdown__results');
 
     console.log(event.target);
     
-    // desktop nav
+    // --- Desktop Navigation Animation ---
     if (event.target.classList.contains('navigation-bar__link')) {
         event.preventDefault();
         const offset = event.target.getAttribute("data-offset");
@@ -17,7 +20,8 @@ document.addEventListener('click', event => {
     }
 
 
-    // mobile burger nav
+
+    // --- Hamburger Nav Menu ---
     if (event.target.classList.contains('hamburger-menu')) {
         event.preventDefault();
         event.stopImmediatePropagation();
@@ -25,14 +29,29 @@ document.addEventListener('click', event => {
         console.log('AICI');
     }
 
-    // products wishlist
+
+
+    // --- Product Wishlist Toggle ---
     if (event.target.classList.contains('icon-heart-empty-1')) {
         event.target.classList.toggle('active');
     }
 
 
 
-    // search desktop
+    // --- Nav Bag Icon ---
+    if (event.target === bagIcon || event.target === bagButton) {
+        event.preventDefault();
+        minicart.classList.toggle('show');
+    }
+    if (minicart.classList.contains('show')) {
+        if (event.target.closest('.minicart') === null && event.target != bagIcon && event.target != bagButton) {
+            minicart.classList.remove('show');
+        } 
+    }
+
+
+
+    // --- Nav Search Icon ---
     if (event.target === searchIcon || event.target === searchButton) {
         event.preventDefault();
         searchDropdown.classList.toggle('show');

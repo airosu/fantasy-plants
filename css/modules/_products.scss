@@ -25,11 +25,15 @@
     &__image-container {
         width: 100%;
         padding-bottom: 0px;
+        margin-bottom: 25px;
         position: relative;
 
         &:hover {
             img {
                 transform: scale(0.93);
+            }
+            .btn {
+                opacity: 1;
             }
 
             @media (max-width: 1024px) {
@@ -38,10 +42,23 @@
                 }
             }
         }
+
+        &.display {
+            margin: 0;
+        }
     }
     &__image {
         width: 100%;
         transition: transform 0.5s;
+    }
+
+    &__button {
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
     }
 
 
