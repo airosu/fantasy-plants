@@ -1,0 +1,46 @@
+.btn {
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+
+    &:focus {
+        outline: none;
+    }
+
+
+
+    &-main {
+        background-color: #3C9D99;
+        color: #fff;
+
+        &:hover {
+            background-color: #248985;
+    
+            @media (max-width: 1024px) {
+                background-color: #3C9D99;
+            }
+        }
+    }
+
+
+
+    &-product {
+        background-color: #3C9D99;
+        border-radius: 12px;
+        color: #fff;
+        cursor: pointer;
+        width: 140px;
+    
+        &:hover {
+            background-color: #248985;
+    
+            @media (max-width: 1024px) {
+                background-color: #3C9D99;
+            }
+        }
+    }    
+}
+
