@@ -168,16 +168,7 @@
                 <div class="minicart__totals-container">
                     <p class="minicart__totals">Cart - <span id="minicart-total">X</span> articles</p>
                 </div>
-                <div class="minicart-product">
-                    <div class="minicart-product__image-container">
-                        <img class="minicart-product__image" src="images/products/3.png">
-                    </div>
-                    <div class="minicart-product__info">
-                        <p class="minicart-product__name">Product Name Longer Name here</p>
-                        <p class="minicart-product__price">69.69 $</p>
-                        <a href="#" class="minicart-product__remove">Remove Product</a>
-                    </div>
-                    <div class="minicart-product__quantity"></div>
+                <div class="minicart__products-container" id="minicart-products">
                 </div>
                 <div class="minicart__subtotals-container">
                     <p class="minicart__subtotal-label">Subtotal</p>
@@ -402,7 +393,7 @@
                     <div class="product best-product best-product--left">
                         <div class="product__image-container">
                             <img class="product__image" src="images/products/26.png" alt="">
-                            <button class="product__button btn btn-product">Buy Now</button>
+                            <button class="product__button btn btn-product" data-id="26">Buy Now</button>
                         </div>
                         <div class="product__wishlist-container">
                             <a class="product__wishilit-link">
@@ -970,6 +961,7 @@
 
     <script src="products.local.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/minicart.js"></script>
     <script src="js/eventListener.js"></script>
 </body>
 </html>

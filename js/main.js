@@ -63,7 +63,6 @@ let searchResults = function(input) {
         document.querySelector('.search-dropdown__no-results-text').innerHTML = `No resutls found for "${input}".`;
         document.querySelector('.search-dropdown__no-results').classList.add('show');
     }
-    console.log(searchArray);
 }
 
 
@@ -76,17 +75,6 @@ searchForm.addEventListener('submit', function(event) {
     resetSearch();
     searchResults(searchValue);
     searchInput.value = '';
-
-    console.log(searchValue);
 });
 
-
-
-
-
-
-
-
-
-// ================================= MINICART ==========================
 

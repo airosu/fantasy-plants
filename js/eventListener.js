@@ -10,7 +10,6 @@ document.addEventListener('click', event => {
     const searchDropdown = document.querySelector('.search-dropdown');
     const searchResults = document.querySelector('.search-dropdown__results');
 
-    console.log(event.target);
     
     // --- Desktop Navigation Animation ---
     if (event.target.classList.contains('navigation-bar__link')) {
@@ -41,11 +40,11 @@ document.addEventListener('click', event => {
     // --- Nav Bag Icon ---
     if (event.target === bagIcon || event.target === bagButton) {
         event.preventDefault();
-        minicart.classList.toggle('show');
+        // minicart.classList.toggle('show');
     }
     if (minicart.classList.contains('show')) {
         if (event.target.closest('.minicart') === null && event.target != bagIcon && event.target != bagButton) {
-            minicart.classList.remove('show');
+            // minicart.classList.remove('show');
         } 
     }
 
@@ -68,6 +67,39 @@ document.addEventListener('click', event => {
             document.querySelector('.search-dropdown__no-results').classList.remove('show');
         }
     }
+
+
+
+
+
+    // -- Add Product to Minicart --
+    if (event.target.classList.contains('btn-product')) {
+        const productId = event.target.getAttribute('data-id');
+        
+        if (Store.checkIfPresent(productId) != true) {
+            products.forEach(product => {
+                if (product.id == productId) {
+                    Store.addItem(product);
+                    UI.addProductToList(product);
+                }
+            });
+        }
+
+        UI.displaySubtotal();
+    }
+
+
+    // -- Delete Product from Minicart --
+    if (event.target.classList.contains('minicart-product__remove')) {
+        const productId = event.target.getAttribute('data-id');
+
+        event.preventDefault();
+        Store.removeItem(productId);
+        UI.removeProductFromList(event.target);
+    }
+
+    console.log(localStorage);
+
 });
 
 
