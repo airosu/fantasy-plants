@@ -1,4 +1,4 @@
-const products = [
+const localProducts = [
     {
         "id": "1",
         "name": "Umbrella Tree",
