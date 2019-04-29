@@ -8,7 +8,7 @@ class Product {
         this.name = name
         this.price = price
         this.img = img
-        this.qtty = qty
+        this.qty = qty
     }
 }
 
@@ -68,20 +68,19 @@ class Store {
 // ====================================== CART PRODUCTS ====================================
 
 class Cart {
-    static getCartProducts() {
+    static getProducts() {
         let storedProducts = Store.getItems();
         let cartProducts = [];
 
-        for (let i of localProducts) {
-            for (let s of storedProducts) {
-                if (i.id == s) {
-                    cartProducts.push(i);
+        for (let product of localProducts) {
+            for (let sProduct of storedProducts) {
+                if (product.id == sProduct) {
+                    let finalProduct = new Product(product.id, product.name, product.price, product.src, 1);
+                    cartProducts.push(finalProduct);
                 }
             }
         }
-        console.log(cartProducts);
         return cartProducts;
-
     }
 }
 
@@ -93,7 +92,70 @@ class Cart {
 // ======================================= UI PRODUCTS =====================================
 
 
+class UI {
+    static displayProducts() {
+        const products = Cart.getProducts();
+        // console.log(products);
 
+        products.forEach(product => UI.addProduct(product))
+    }
+
+    static displayNumberOfProducts() {
+        const products = Cart.getProducts();
+        const total = document.getElementById('minicart-articles');
+
+        total.innerText = products.length;
+    }
+
+    static displaySubtoalPrice() {
+        const products = Cart.getProducts();
+        const price = document.getElementById('minicart-subtotal');
+        let priceList = [];
+
+        products.forEach(product => priceList.push(product.price));
+        let sum = priceList.reduce((partial_sum, a) => parseFloat(partial_sum) + parseFloat(a));
+
+        price.innerText = sum.toFixed(2);
+    }
+
+    static displayMinicart() {
+        this.displayProducts();
+        this.displayNumberOfProducts();
+        this.displaySubtoalPrice();
+    }
+
+
+
+
+
+    static addProduct(product) {
+        const list = document.getElementById('minicart-products');
+        const item = document.createElement('div');
+
+        item.className = 'minicart-product';
+        item.innerHTML = `
+        <div class="minicart-product__image-container">
+            <img class="minicart-product__image" src="${product.img}">
+        </div>
+        <div class="minicart-product__info">
+            <p class="minicart-product__name">${product.name}</p>
+            <p class="minicart-product__price">${product.price} $</p>
+            <a href="#" class="minicart-product__remove" data-id="${product.id}">Remove Product</a>
+        </div>
+        <div class="minicart-product__quantity">${product.qty}</div>
+        `;
+
+        list.appendChild(item);
+    }
+
+
+
+
+
+    static removeProduct(element) {
+        element.parentElement.parentElement.remove();
+    }
+}
 
 
 
@@ -109,5 +171,13 @@ class Cart {
 
 
 // QA
-// Store.addItem(localProducts[26]);
-// Cart.getCartProducts();
+// Store.addItem(localProducts[25]);
+// Cart.getProducts();
+
+
+
+
+
+// === Initialize Minicart ===
+
+UI.displayMinicart();
