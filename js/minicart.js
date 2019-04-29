@@ -13,12 +13,6 @@ class Product {
 }
 
 
-
-
-
-
-
-
 // ====================================== LOCAL STORAGE ====================================
 
 class Store {
@@ -34,6 +28,21 @@ class Store {
         return items;
     }
 
+    static checkIfPresent(id) {
+        const items = this.getItems();
+        let res;
+
+        items.forEach(storedId => {
+            if (storedId == id) {
+                res = true;
+            } else {
+                res = false;
+            }
+        });
+
+        return res;
+    }
+
 
 
     static addItem(product) {
@@ -44,18 +53,16 @@ class Store {
     }
 
 
-
-
-    static removeItem(product) {
+    static removeItem(id) {
         let items = this.getItems();
 
         for (let i of items) {
-            if (i == product.id) {
+            if (i == id) {
                 items = items.filter(save => save != i);
             }
         }
 
-        items.setItem('products', JSON.stringify(items));
+        localStorage.setItem('products', JSON.stringify(items));
     }
 }
 
@@ -73,8 +80,8 @@ class Cart {
         let cartProducts = [];
 
         for (let product of localProducts) {
-            for (let sProduct of storedProducts) {
-                if (product.id == sProduct) {
+            for (let id of storedProducts) {
+                if (product.id == id) {
                     let finalProduct = new Product(product.id, product.name, product.price, product.src, 1);
                     cartProducts.push(finalProduct);
                 }
@@ -95,7 +102,7 @@ class Cart {
 class UI {
     static displayProducts() {
         const products = Cart.getProducts();
-        // console.log(products);
+        console.log(products);
 
         products.forEach(product => UI.addProduct(product))
     }
@@ -113,13 +120,10 @@ class UI {
         let priceList = [];
 
         products.forEach(product => priceList.push(product.price));
-        let sum = priceList.reduce((partial_sum, a) => parseFloat(partial_sum) + parseFloat(a));
-
-        price.innerText = sum.toFixed(2);
+        price.innerText = Calc.arraySumFloat(priceList);
     }
 
     static displayMinicart() {
-        this.displayProducts();
         this.displayNumberOfProducts();
         this.displaySubtoalPrice();
     }
@@ -179,5 +183,5 @@ class UI {
 
 
 // === Initialize Minicart ===
-
+UI.displayProducts();
 UI.displayMinicart();

@@ -68,6 +68,44 @@ document.addEventListener('click', event => {
         }
     }
 
+
+
+
+
+    // --- Add Product to Minicart ---
+    if (event.target.classList.contains('btn-product')) {
+        const productId = event.target.getAttribute('data-id');
+
+        event.preventDefault();
+
+        if (!Store.checkIfPresent(productId) === true) {
+            localProducts.forEach(product => {
+                if (product.id == productId) {
+                    let finalProduct = new Product(product.id, product.name, product.price, product.src, 1);
+                    Store.addItem(finalProduct);
+                    UI.addProduct(finalProduct);
+                    UI.displayMinicart();
+                }
+            });
+        } else {
+            console.log('Product already in cart!');
+        }
+    }
+
+
+
+    // --- Delete Product from Minicart ---
+    if (event.target.classList.contains('minicart-product__remove')) {
+        const productId = event.target.getAttribute('data-id');
+
+        event.preventDefault();
+        Store.removeItem(productId);
+        UI.removeProduct(event.target);
+        UI.displayMinicart();
+    }
+        
+
+
     
 
     // -- DEBUG CONSOLE LOG --
