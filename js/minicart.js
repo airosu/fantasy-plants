@@ -71,6 +71,24 @@ class Store {
 
 
 
+    static decreaseQty(id) {
+        let items = this.getItems();
+
+        for (let i of items) {
+            if (i.id == id) {
+                if (i.qty > 1) {
+                    i.qty--;
+                    i.total = (parseFloat(i.total) - parseFloat(i.price)).toFixed(2)
+                }
+            }
+        }
+
+        localStorage.setItem('products', JSON.stringify(items));
+    }
+
+
+
+
     static removeItem(id) {
         let items = this.getItems();
 
@@ -118,12 +136,20 @@ class Cart {
 
 
 class UI {
+    static displayMinicart() {
+
+    }
+
+    static displayEmptyMinicart() {
+        
+    }
+
+
     static displayProducts() {
         const products = Cart.getProducts();
 
         products.forEach(product => UI.addProduct(product))
     }
-
 
 
     static displayNumberOfProducts() {
@@ -142,6 +168,7 @@ class UI {
 
         products.forEach(product => priceList.push(product.total));
         price.innerText = Calc.arraySumFloat(priceList);
+
     }
 
 
@@ -172,9 +199,9 @@ class UI {
         </div>
         <div class="minicart-product__quantity-container">
             <div class="minicart-product__quantity-main">
-                <a class="minicart-product__change"><span class="minicart-product__minus-sign">-</span></a>
+                <a class="minicart-product__change"><span class="minicart-product__minus-sign minicart-qty-change" data-id="${product.id}">-</span></a>
                 <span class="minicart-product__quantity mini-qty">${product.qty}</span>
-                <a class="minicart-product__change"><span class="minicart-product__plus-sign">+</span></a>
+                <a class="minicart-product__change"><span class="minicart-product__plus-sign minicart-qty-change" data-id="${product.id}">+</span></a>
             </div>
         </div>
         `;
@@ -183,7 +210,7 @@ class UI {
     }
 
 
-    
+
     static updateProduct(productId) {
         const products = Cart.getProducts();
         const qty = document.querySelector(`.product-${productId} .mini-qty`);
@@ -203,6 +230,7 @@ class UI {
 
     static removeProduct(element) {
         element.parentElement.parentElement.remove();
+
     }
 }
 

@@ -104,7 +104,24 @@ document.addEventListener('click', event => {
         UI.removeProduct(event.target);
         UI.displayMinicart();
     }
-        
+
+
+
+    // --- Increase / Decrease QTY from minicart ---
+    if (event.target.classList.contains('minicart-qty-change')) {
+        const productId = event.target.getAttribute('data-id');
+
+        if (event.target.classList.contains('minicart-product__plus-sign')) {
+            Store.updateItem(productId);
+            UI.updateProduct(productId);
+            UI.displayMinicart();
+
+        } else if (event.target.classList.contains('minicart-product__minus-sign')) {
+            Store.decreaseQty(productId);
+            UI.updateProduct(productId);
+            UI.displayMinicart();
+        }
+    }
 
 
     
