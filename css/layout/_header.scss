@@ -215,6 +215,29 @@
         display: block;
     }
 
+
+    &__no-items {
+        height: 150px;
+        display: none;
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+
+        &.show {
+            display: flex;
+        }
+    }
+
+    
+    &__no-items-text {
+        margin: auto;
+        padding: 30px;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 19px;
+    }
+
+
+
     &__wrapper {
         padding: 20px;
     }
@@ -327,6 +350,7 @@
         justify-content: space-around;
         align-items: center;
         padding: 0 15px 0 16px;
+        user-select: none;
     }
 
 

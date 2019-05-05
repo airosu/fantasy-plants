@@ -642,6 +642,27 @@ body {
   display: block;
 }
 
+.minicart__no-items {
+  height: 150px;
+  display: none;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.minicart__no-items.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.minicart__no-items-text {
+  margin: auto;
+  padding: 30px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 19px;
+}
+
 .minicart__wrapper {
   padding: 20px;
 }
@@ -757,6 +778,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 15px 0 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .minicart-product__quantity {
