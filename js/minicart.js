@@ -3,10 +3,11 @@
 // ====================================== PRODUCT CLASS ====================================
 
 class Product {
-    constructor(id, name, price, img, qty) {
+    constructor(id, name, price, total, img, qty) {
         this.id = id
         this.name = name
         this.price = price
+        this.total = total
         this.img = img
         this.qty = qty
     }
@@ -28,19 +29,16 @@ class Store {
         return items;
     }
 
+
     static checkIfPresent(id) {
         const items = this.getItems();
-        let res;
+        let miniList = [];
 
-        items.forEach(storedId => {
-            if (storedId == id) {
-                res = true;
-            } else {
-                res = false;
-            }
-        });
-
-        return res;
+        for (let i of items) {
+            miniList.push(i.id);
+        }
+        
+        return miniList.includes(id);
     }
 
 
@@ -48,16 +46,36 @@ class Store {
     static addItem(product) {
         let items = this.getItems();
 
-        items.push(product.id);
+        items.push({
+            "id": product.id,
+            "qty": product.qty,
+            "price": product.price,
+            "total": product.price,
+        });
+
         localStorage.setItem('products', JSON.stringify(items));
     }
+
+    static updateItem(id) {
+        let items = this.getItems();
+
+        for (let i of items) {
+            if (i.id == id) {
+                i.qty++;
+                i.total = (parseFloat(i.price) + parseFloat(i.total)).toFixed(2)
+            } 
+        }
+
+        localStorage.setItem('products', JSON.stringify(items));
+    }
+
 
 
     static removeItem(id) {
         let items = this.getItems();
 
         for (let i of items) {
-            if (i == id) {
+            if (i.id == id) {
                 items = items.filter(save => save != i);
             }
         }
@@ -80,9 +98,9 @@ class Cart {
         let cartProducts = [];
 
         for (let product of localProducts) {
-            for (let id of storedProducts) {
-                if (product.id == id) {
-                    let finalProduct = new Product(product.id, product.name, product.price, product.src, 1);
+            for (let stored of storedProducts) {
+                if (product.id == stored.id) {
+                    let finalProduct = new Product(product.id, product.name, product.price, stored.total, product.src, stored.qty);
                     cartProducts.push(finalProduct);
                 }
             }
@@ -102,10 +120,11 @@ class Cart {
 class UI {
     static displayProducts() {
         const products = Cart.getProducts();
-        console.log(products);
 
         products.forEach(product => UI.addProduct(product))
     }
+
+
 
     static displayNumberOfProducts() {
         const products = Cart.getProducts();
@@ -114,14 +133,18 @@ class UI {
         total.innerText = products.length;
     }
 
+
+
     static displaySubtoalPrice() {
         const products = Cart.getProducts();
         const price = document.getElementById('minicart-subtotal');
         let priceList = [];
 
-        products.forEach(product => priceList.push(product.price));
+        products.forEach(product => priceList.push(product.total));
         price.innerText = Calc.arraySumFloat(priceList);
     }
+
+
 
     static displayMinicart() {
         this.displayNumberOfProducts();
@@ -137,19 +160,41 @@ class UI {
         const item = document.createElement('div');
 
         item.className = 'minicart-product';
+        item.classList.add(`product-${product.id}`);
         item.innerHTML = `
         <div class="minicart-product__image-container">
             <img class="minicart-product__image" src="${product.img}">
         </div>
         <div class="minicart-product__info">
             <p class="minicart-product__name">${product.name}</p>
-            <p class="minicart-product__price">${product.price} $</p>
+            <p class="minicart-product__price mini-price">${product.price} $</p>
             <a href="#" class="minicart-product__remove" data-id="${product.id}">Remove Product</a>
         </div>
-        <div class="minicart-product__quantity">${product.qty}</div>
+        <div class="minicart-product__quantity-container">
+            <div class="minicart-product__quantity-main">
+                <a class="minicart-product__change"><span class="minicart-product__minus-sign">-</span></a>
+                <span class="minicart-product__quantity mini-qty">${product.qty}</span>
+                <a class="minicart-product__change"><span class="minicart-product__plus-sign">+</span></a>
+            </div>
+        </div>
         `;
 
         list.appendChild(item);
+    }
+
+
+    
+    static updateProduct(productId) {
+        const products = Cart.getProducts();
+        const qty = document.querySelector(`.product-${productId} .mini-qty`);
+        const price = document.querySelector(`.product-${productId} .mini-price`);
+
+        for (let p of products) {
+            if (p.id == productId) {
+                qty.innerText = p.qty;
+                price.innerText = `${p.total} $`;
+            }
+        }
     }
 
 

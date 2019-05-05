@@ -77,18 +77,19 @@ document.addEventListener('click', event => {
         const productId = event.target.getAttribute('data-id');
 
         event.preventDefault();
-
         if (!Store.checkIfPresent(productId) === true) {
             localProducts.forEach(product => {
                 if (product.id == productId) {
-                    let finalProduct = new Product(product.id, product.name, product.price, product.src, 1);
+                    let finalProduct = new Product(product.id, product.name, product.price, product.price, product.src, 1);
                     Store.addItem(finalProduct);
                     UI.addProduct(finalProduct);
                     UI.displayMinicart();
                 }
             });
         } else {
-            console.log('Product already in cart!');
+            Store.updateItem(productId);
+            UI.updateProduct(productId);
+            UI.displayMinicart();
         }
     }
 
