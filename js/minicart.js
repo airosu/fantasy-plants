@@ -136,14 +136,32 @@ class Cart {
 
 
 class UI {
-    static displayMinicart() {
+    static displayVisibleMinicart() {
+        document.querySelector('.minicart__wrapper').classList.remove('hide');
+        document.querySelector('.minicart__no-items').classList.remove('show');
 
     }
 
     static displayEmptyMinicart() {
-        
+        document.querySelector('.minicart__wrapper').classList.add('hide');
+        document.querySelector('.minicart__no-items').classList.add('show');
     }
 
+    // Executed once, on page load
+    static initializeMinicart() {
+        if (Store.getItems().length >0 ) {
+            this.displayVisibleMinicart();
+        } else {
+            this.displayEmptyMinicart();
+        }
+
+        this.displayProducts();
+        this.displayMinicart();
+    }
+
+
+
+    
 
     static displayProducts() {
         const products = Cart.getProducts();
@@ -238,23 +256,7 @@ class UI {
 
 
 
-
-
-
-
-
-
-
-
-
-// QA
-// Store.addItem(localProducts[25]);
-// Cart.getProducts();
-
-
-
-
-
 // === Initialize Minicart ===
-UI.displayProducts();
-UI.displayMinicart();
+
+UI.initializeMinicart();
+

@@ -25,7 +25,6 @@ document.addEventListener('click', event => {
         event.preventDefault();
         event.stopImmediatePropagation();
         document.querySelector('.navigation-bar__main').classList.toggle('nav-mobile');
-        console.log('AICI');
     }
 
 
@@ -40,11 +39,13 @@ document.addEventListener('click', event => {
     // --- Nav Bag Icon ---
     if (event.target === bagIcon || event.target === bagButton) {
         event.preventDefault();
-        // minicart.classList.toggle('show');
+        minicart.classList.toggle('show');
+        bagIcon.classList.toggle('close');
     }
     if (minicart.classList.contains('show')) {
-        if (event.target.closest('.minicart') === null && event.target != bagIcon && event.target != bagButton) {
-            // minicart.classList.remove('show');
+        if (event.target.closest('.minicart') === null && event.target != bagIcon && event.target != bagButton && !event.target.classList.contains('product__button')) {
+            minicart.classList.remove('show');
+            bagIcon.classList.remove('close');
         } 
     }
 
@@ -91,6 +92,13 @@ document.addEventListener('click', event => {
             UI.updateProduct(productId);
             UI.displayMinicart();
         }
+
+        if (Store.getItems().length === 1) {
+            UI.displayVisibleMinicart();
+        }
+
+        minicart.classList.add('show');
+        bagIcon.classList.add('close');
     }
 
 
@@ -103,6 +111,10 @@ document.addEventListener('click', event => {
         Store.removeItem(productId);
         UI.removeProduct(event.target);
         UI.displayMinicart();
+
+        if (Store.getItems().length === 0) {
+            UI.displayEmptyMinicart();
+        }
     }
 
 
@@ -130,6 +142,7 @@ document.addEventListener('click', event => {
     if (event.target.classList.contains('minicart__view-button')) {
         console.log(localStorage);
     }
+    console.log(event.target);
 
 });
 

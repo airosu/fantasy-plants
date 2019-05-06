@@ -40,9 +40,9 @@ let resetSearch = function() {
 // --- Search Results Function ---
 let searchResults = function(input) {
     let searchArray = [];
-    for (let i=0; i<products.length; i++) {
-        if (products[i].name.toLowerCase().includes(input.toLowerCase()) || products[i].tags.toLowerCase().includes(input.toLowerCase())) {
-            searchArray.push(products[i]);
+    for (let i=0; i<localProducts.length; i++) {
+        if (localProducts[i].name.toLowerCase().includes(input.toLowerCase()) || localProducts[i].tags.toLowerCase().includes(input.toLowerCase())) {
+            searchArray.push(localProducts[i]);
         }
     }
     if (searchArray.length != 0) {
