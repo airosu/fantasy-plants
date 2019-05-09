@@ -40,7 +40,7 @@ const localProducts = [
         "name": "Dream Gate",
         "description": "",
         "tags": "stone, outside, outdoors, nature, garden",
-        "src": "images/products/15.png",
+        "src": "images/products/5.png",
         "cls": "decoration",
         "price": "1200.00"
     },

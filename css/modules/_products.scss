@@ -2,10 +2,20 @@
 .product {
     &__wishlist-heart {
         cursor: pointer;
-        &.active,
-        &:hover {
+        width: 20px;
+        height: 25px;
+
+        &.active {
             &::before {
                 content: '\e80d';
+            }
+        }
+
+        &:hover {
+            &::before {
+                @media (min-width: 1024px) {
+                    content: '\e80d';
+                }
             }
         }
     }

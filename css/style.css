@@ -306,10 +306,18 @@ body {
 
 .product__wishlist-heart {
   cursor: pointer;
+  width: 20px;
+  height: 25px;
 }
 
-.product__wishlist-heart.active::before, .product__wishlist-heart:hover::before {
+.product__wishlist-heart.active::before {
   content: '\e80d';
+}
+
+@media (min-width: 1024px) {
+  .product__wishlist-heart:hover::before {
+    content: '\e80d';
+  }
 }
 
 .best-sellers-section {
