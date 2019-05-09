@@ -226,7 +226,7 @@ const localProducts = [
     },
     {
         "id": "26",
-        "name": "Narcissus Cantabricus Arrangement",
+        "name": "Narcissus Cantabricus",
         "description": "",
         "tags": "indoors, flower, pot, decor, home, 4",
         "src": "images/products/26.png",

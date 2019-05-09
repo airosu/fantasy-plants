@@ -78,3 +78,34 @@ searchForm.addEventListener('submit', function(event) {
 });
 
 
+
+
+// --- Generating Homepage Products Info ---
+
+let updateHomepageProducts = function() {
+    const productTitles = document.querySelectorAll('.product.best-product .product__title');
+    const productPrices = document.querySelectorAll('.product.best-product .product__price');
+
+    for (let t of productTitles) {
+        for (let i of localProducts) {
+            if (t.getAttribute('data-id') == i.id) {
+                t.innerText = i.name;
+                break;
+            }
+        }
+    }
+
+
+    for (let p of productPrices) {
+        for (let i of localProducts) {
+            if (p.getAttribute('data-id') == i.id) {
+                p.innerText = `${i.price} $`;
+                break;
+            }
+        }
+    }
+}
+
+updateHomepageProducts();
+
+
