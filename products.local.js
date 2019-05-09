@@ -40,7 +40,7 @@ const localProducts = [
         "name": "Dream Gate",
         "description": "",
         "tags": "stone, outside, outdoors, nature, garden",
-        "src": "images/products/15.png",
+        "src": "images/products/5.png",
         "cls": "decoration",
         "price": "1200.00"
     },
@@ -226,7 +226,7 @@ const localProducts = [
     },
     {
         "id": "26",
-        "name": "Narcissus Cantabricus Arrangement",
+        "name": "Narcissus Cantabricus",
         "description": "",
         "tags": "indoors, flower, pot, decor, home, 4",
         "src": "images/products/26.png",

@@ -142,8 +142,6 @@ document.addEventListener('click', event => {
     if (event.target.classList.contains('minicart__view-button')) {
         console.log(localStorage);
     }
-    console.log(event.target);
-
 });
 
 

@@ -306,10 +306,18 @@ body {
 
 .product__wishlist-heart {
   cursor: pointer;
+  width: 20px;
+  height: 25px;
 }
 
-.product__wishlist-heart.active::before, .product__wishlist-heart:hover::before {
+.product__wishlist-heart.active::before {
   content: '\e80d';
+}
+
+@media (min-width: 1024px) {
+  .product__wishlist-heart:hover::before {
+    content: '\e80d';
+  }
 }
 
 .best-sellers-section {
@@ -342,6 +350,10 @@ body {
     -webkit-transform: none;
             transform: none;
   }
+  .product__image-container:hover .btn {
+    opacity: 0;
+    display: none;
+  }
 }
 
 .product__image-container.display {
@@ -365,6 +377,12 @@ body {
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+}
+
+@media (max-width: 1024px) {
+  .product__button {
+    display: none;
+  }
 }
 
 .product__wishlist-container {
