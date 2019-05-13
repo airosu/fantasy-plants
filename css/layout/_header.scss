@@ -435,6 +435,7 @@
 .utility-bar {
     width: 100%;
     height: 38px;
+    position: relative;
     display: flex;
     justify-content: space-between;
     order: 1;
@@ -520,7 +521,64 @@
 }
 
 
+// --- Language dropdown
 
+.icon-down-open {
+    &.active {
+        &::before {
+            content: '\f005';
+        }
+    }
+}
+
+.language {
+    &__menu {
+        display: none;
+        position: absolute;
+        right: 135px;
+        top: 37px;
+        width: 100px;
+        background-color: #68caa4;
+        border-top: 1px solid #43AE86;
+        text-align: center;
+
+        &.show {
+            display: block;
+        }
+    }
+
+    &__item {
+        padding: 7px 0;
+    }
+
+    &__link {
+        font-size: 12px;
+        line-height: 16px;
+        color: $color-main;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+}
+
+
+
+// ==== Mobile Dark Overlay ===
+
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 75px;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    &.show {
+        display: block;
+    }
+}
 
 
 
@@ -696,6 +754,9 @@
         &:hover {
             color: #68CAA4;
 
+            @media (max-width: 1024px) {
+                color: $color-main;
+            }
         }
 
         &:hover::after {
