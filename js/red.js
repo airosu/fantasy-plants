@@ -1,3 +1,5 @@
+
+
 class Random {
     // --- Returns a random number between a and b
     static randInt = function (a, b) {

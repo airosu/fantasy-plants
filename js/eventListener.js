@@ -9,7 +9,10 @@ document.addEventListener('click', event => {
     const searchButton = document.querySelector('.navigation-bar__search-button');
     const searchDropdown = document.querySelector('.search-dropdown');
     const searchResults = document.querySelector('.search-dropdown__results');
-
+    const languageMenuNav = document.getElementById('language-menu');
+    const languageDropdown = document.getElementById('language-dropdown');
+    const languageArrow = document.querySelector('.icon-down-open');
+    const mobileDarkOverlay = document.querySelector('.mobile-overlay');
     
     // --- Desktop Navigation Animation ---
     if (event.target.classList.contains('navigation-bar__link')) {
@@ -25,8 +28,16 @@ document.addEventListener('click', event => {
         event.preventDefault();
         event.stopImmediatePropagation();
         document.querySelector('.navigation-bar__main').classList.toggle('nav-mobile');
+        mobileDarkOverlay.classList.toggle('show');
     }
-
+    if (event.target.closest('.navigation-bar__main') === null && !event.target.classList.contains('hamburger-menu')) {
+        document.querySelector('.navigation-bar__main').classList.remove('nav-mobile');
+        mobileDarkOverlay.classList.remove('show');
+    }
+    if (event.target.classList.contains('navigation-bar__link')) {
+        document.querySelector('.navigation-bar__main').classList.remove('nav-mobile');
+        mobileDarkOverlay.classList.remove('show');
+    }
 
 
     // --- Product Wishlist Toggle ---
@@ -67,6 +78,28 @@ document.addEventListener('click', event => {
             searchResults.classList.remove('show');
             document.querySelector('.search-dropdown__no-results').classList.remove('show');
         }
+    }
+
+
+    // --- Nav Language Dropdown ---
+    if (event.target.classList.contains('utility-bar__country') || event.target.classList.contains('icon-down-open')) {
+        event.preventDefault();
+
+        languageDropdown.classList.toggle('show');
+        languageArrow.classList.toggle('active');
+    }
+    if (languageDropdown.classList.contains('show')) {
+        if (event.target.closest('.language__menu') === null && event.target != languageMenuNav && event.target != languageArrow) {
+            languageDropdown.classList.remove('show');
+            languageArrow.classList.remove('active');
+        }
+    }
+    if (event.target.classList.contains('language__link')) {
+        event.preventDefault();
+        languageDropdown.classList.remove('show');
+        languageMenuNav.innerHTML = `
+            ${event.target.innerText} <i class="icon-down-open"></i>
+        `;
     }
 
 
@@ -142,6 +175,7 @@ document.addEventListener('click', event => {
     if (event.target.classList.contains('minicart__view-button')) {
         console.log(localStorage);
     }
+
 });
 
 
