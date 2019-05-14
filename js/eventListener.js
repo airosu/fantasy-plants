@@ -13,12 +13,22 @@ document.addEventListener('click', event => {
     const languageDropdown = document.getElementById('language-dropdown');
     const languageArrow = document.querySelector('.icon-down-open');
     const mobileDarkOverlay = document.querySelector('.mobile-overlay');
+    const infoMainContainer = document.querySelector('.info-modal__container');
+
     
     // --- Desktop Navigation Animation ---
     if (event.target.classList.contains('navigation-bar__link')) {
         event.preventDefault();
         const offset = event.target.getAttribute("data-offset");
         scrollToAnchor(event.target, offset);
+    }
+
+    // --- Info Modal ---
+    if (event.target.classList.contains('utility-bar__help')) {
+        infoMainContainer.classList.toggle('show');
+    }
+    if (event.target.classList.contains('info-modal__overlay') || event.target.classList.contains('info-modal__close')) {
+        infoMainContainer.classList.remove('show');
     }
 
 
