@@ -1,0 +1,83 @@
+.info-modal {
+    &__container {
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 5;
+
+        &.show {
+            display: flex;
+        }
+    }
+
+    &__main {
+        width: 700px;
+        height: 370px;
+        background-color: #fff;
+        margin: 200px auto 0 auto;
+        border: 1px solid $color-second;
+        z-index: 6;
+    }
+
+    &__close-wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__close {
+        font-family: 'Montserrat', sans-serif;
+        color: $color-main;
+        font-size: 26px;
+        font-weight: 600;
+        margin: 10px 15px 0 0;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+    &__overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+    }
+
+
+
+
+
+    &__heading {
+        font-family: 'Montserrat', sans-serif;
+        color: $color-main;
+        font-size: 26px;
+        font-weight: 600;
+        text-align: center;
+        margin: 10px 0 50px 0;
+    }
+
+    &__description {
+        font-family: 'Maven Pro', sans-serif;
+        color: $color-second;
+        font-size: 17px;
+        line-height: 27px;
+        font-weight: normal;
+        padding: 0 50px;
+    }
+
+    &__link {
+        color: #555;
+        text-decoration: underline;
+
+        &:active {
+            color: #555;
+        }
+
+        &:visited {
+            color: #555;
+        }
+    }
+}
+
