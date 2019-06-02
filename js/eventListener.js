@@ -25,9 +25,11 @@ document.addEventListener('click', event => {
 
     // --- Info Modal ---
     if (event.target.classList.contains('utility-bar__help')) {
+        event.preventDefault();
         infoMainContainer.classList.toggle('show');
     }
     if (event.target.classList.contains('info-modal__overlay') || event.target.classList.contains('info-modal__close')) {
+        event.preventDefault();
         infoMainContainer.classList.remove('show');
     }
 
@@ -179,12 +181,22 @@ document.addEventListener('click', event => {
     }
 
 
+
+    if (event.target.classList.contains('utility-bar__login')) {
+        event.preventDefault();
+    }
+
+    if (event.target.classList.contains('utility-bar__consultant')) {
+        event.preventDefault();
+    }
+
     
 
     // -- DEBUG CONSOLE LOG --
     if (event.target.classList.contains('minicart__view-button')) {
         console.log(localStorage);
     }
+
 
 });
 
